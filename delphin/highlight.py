@@ -13,6 +13,8 @@ from pygments.token import (
     Comment, Error
 )
 
+__version__ = '1.0.0'
+
 _tdl_break_characters = re.escape(r'<>!=:.#&,[];$()^/')
 
 

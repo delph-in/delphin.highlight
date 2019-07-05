@@ -27,7 +27,18 @@ The TDL lexer is used for [PyDelphin][]'s [Sphinx][]-based documentation:
 
 # Installation and Requirements
 
-This module only depends on Pygments version 2.3.1 or higher.
+This module is a [namespace package][] of [PyDelphin][], but it does
+not depend on any PyDelphin packages, rather it only depends on
+Pygments version 2.3.1 or higher. This means it can be used
+independently of PyDelphin.
+
+This module can be installed via `pip`:
+
+``` console
+$ pip install delphin.highlight
+```
+
+[namespace package]: https://docs.python.org/3/reference/import.html#namespace-packages
 
 # Usage
 
