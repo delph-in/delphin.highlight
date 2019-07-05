@@ -9,8 +9,12 @@ for the following [DELPH-IN][] formats:
 
 In addition, a Pygments [style](http://pygments.org/docs/styles/) for
 MRS is available which helps highlight the interesting information in
-SimpleMRS. It is meant for console output, and works with both dark
-and light backgrounds:
+SimpleMRS.
+
+# Examples
+
+The SimpleMRS style is meant for console output, and works with both
+dark and light backgrounds:
 
 ![SimpleMRS on a dark background](images/mrs-dark.png)
 
@@ -23,8 +27,14 @@ The TDL lexer is used for [PyDelphin][]'s [Sphinx][]-based documentation:
 
 # Installation and Requirements
 
-This module only depends on Pygments version 2.3.1 or higher. The
-console highlighting is provided by the [PyDelphin][] package.
+This module only depends on Pygments version 2.3.1 or higher.
+
+# Usage
+
+While you can drop in the lexers into Pygments-capable applications
+like wikis or documentation sites, the console highlighting of
+SimpleMRS is provided by the [PyDelphin][] package via the `delphin
+convert` command.
 
 
 [DELPH-IN]: http://www.delph-in.net
