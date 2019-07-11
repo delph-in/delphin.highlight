@@ -1,15 +1,17 @@
 # delphin.highlight
 
-This module provides [Pygments][] [lexers](http://pygments.org/lexers)
-for the following [DELPH-IN][] formats:
+This module provides the following [Pygments][]
+[lexers](http://pygments.org/lexers):
 
-* [TDL][] -- Type Description Language
-* [SimpleMRS][] -- A popular serialization format for Minimal
-  Recursion Semantics
+* `delphin.highlight.TDLLexer` -- For [Type Description Language][TDL] (TDL)
+* `delphin.highlight.SimpleMRSLexer` -- For [SimpleMRS][], a popular
+  serialization format for Minimal Recursion Semantics
 
-In addition, a Pygments [style](http://pygments.org/docs/styles/) for
-MRS is available which helps highlight the interesting information in
-SimpleMRS.
+In addition, the following Pygments
+[style](http://pygments.org/docs/styles/) is included:
+
+* `delphin.highlight.MRSStyle` -- Draws attention to interesting
+  information in SimpleMRS
 
 # Examples
 
@@ -38,6 +40,11 @@ This module can be installed via `pip`:
 $ pip install delphin.highlight
 ```
 
+Note, however, that it will likely not work correctly if installed to
+the same environment as a PyDelphin version less than 1.0.0 because of
+how namespace packages work. But in this case it is already included
+in those versions as `delphin.extra.highlight`.
+
 [namespace package]: https://docs.python.org/3/reference/import.html#namespace-packages
 
 # Usage
@@ -45,7 +52,14 @@ $ pip install delphin.highlight
 While you can drop in the lexers into Pygments-capable applications
 like wikis or documentation sites, the console highlighting of
 SimpleMRS is provided by the [PyDelphin][] package via the `delphin
-convert` command.
+convert` command. For instance, the example in the screenshot above
+could be created with a command like the following:
+
+```console
+$ echo "The chef whose soup spilled quit." \
+> | ace -g ~/grammars/erg-2018-x86-64-0.9.30.dat -1 \
+> | delphin convert --from ace --color=always --indent
+```
 
 
 [DELPH-IN]: http://www.delph-in.net
